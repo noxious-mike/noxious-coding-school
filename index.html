@@ -2,254 +2,254 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Noxious Coding Training</title>
-  <meta name="description" content="Noxious Coding Training in Umoja, Nairobi. Teaching kids and young minds coding skills in web, mobile, and backend development. Learn HTML, CSS, JavaScript, Python, React, Flutter, and more.">
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Noxious Coding School - Umoja</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --primary: #075fe4;
-      --secondary: #0789da;
-      --neutral: #b6b6b7;
-      --dark: #333;
-      --light: #ffffff;
-      --accent: #697991;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: var(--secondary);
-      color: var(--dark);
+      font-family: 'Roboto', sans-serif;
+      background: #0d0d0d;
+      color: #e0e0e0;
       line-height: 1.6;
-    }
-
-    h1, h2, h3 {
-      margin-top: 0;
-    }
-
-    a {
-      text-decoration: none;
+      overflow-x: hidden;
     }
 
     header {
-      background-color: var(--primary);
-      color: var(--light);
+      background: #111;
+      color: #0ff;
+      text-align: center;
       padding: 20px;
-      text-align: left;
+      font-family: 'Orbitron', sans-serif;
+      text-shadow: 0 0 10px #0ff, 0 0 20px #ff00ff;
+      animation: flicker 2s infinite alternate;
+    }
+
+    @keyframes flicker {
+      0% { opacity: 1; }
+      50% { opacity: 0.8; text-shadow: 0 0 5px #0ff, 0 0 15px #ff00ff; }
+      100% { opacity: 1; text-shadow: 0 0 20px #0ff, 0 0 40px #ff00ff; }
     }
 
     nav {
-      background: var(--dark);
       display: flex;
       justify-content: center;
-      gap: 30px;
+      background: #1a1a1a;
       padding: 10px;
+      flex-wrap: wrap;
     }
 
     nav a {
-      color: var(--light);
-      font-weight: 600;
-      transition: color 0.3s ease;
+      color: #0ff;
+      margin: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Orbitron', sans-serif;
+      position: relative;
     }
 
-    nav a:hover {
-      color: var(--secondary);
+    nav a::after {
+      content: "";
+      display: block;
+      height: 2px;
+      background: #ff00ff;
+      width: 0;
+      transition: 0.3s;
+      margin-top: 5px;
+    }
+
+    nav a:hover::after {
+      width: 100%;
     }
 
     .hero {
-      background: url('https://images.unsplash.com/photo-1581091012184-5c1c6b6d8d32?auto=format&fit=crop&w=1200&q=80') 
-                  no-repeat center center/cover;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--light);
-      font-size: 2rem;
-      font-weight: bold;
-      text-shadow: 2px 2px 4px #000;
+      background: linear-gradient(135deg, #111, #222);
       text-align: center;
-      padding: 0 15px;
+      padding: 80px 20px;
+      color: #0ff;
+      position: relative;
     }
 
-    .section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
+    .hero h2 {
+      font-size: 2.5em;
+      font-family: 'Orbitron', sans-serif;
+      text-shadow: 0 0 15px #0ff, 0 0 25px #ff00ff;
+      animation: neonPulse 3s infinite;
     }
 
-    .courses {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+    @keyframes neonPulse {
+      0%, 100% { text-shadow: 0 0 10px #0ff, 0 0 20px #ff00ff; }
+      50% { text-shadow: 0 0 30px #0ff, 0 0 50px #ff00ff; }
     }
 
-    .course {
-      background: var(--light);
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    }
-
-    .commands {
-      background: #1e1e1e;
-      color: #f1f1f1;
-      padding: 15px;
-      border-radius: 8px;
-      margin: 20px 0;
-      overflow-x: auto;
-    }
-    .commands code {
-      font-family: monospace;
-      font-size: 14px;
-    }
-
-    button.copy-btn {
-      margin-top: 10px;
-      padding: 8px 12px;
-      background: var(--primary);
-      color: var(--light);
-      border: none;
+    .hero .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      border: 2px solid #0ff;
+      color: #0ff;
+      font-family: 'Orbitron', sans-serif;
+      text-transform: uppercase;
+      text-decoration: none;
       border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
+      transition: 0.3s;
+      position: relative;
+      overflow: hidden;
     }
-    button.copy-btn:hover {
-      background: var(--secondary);
+
+    .hero .btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(0,255,255,0.6), transparent);
+      transition: 0.5s;
+    }
+
+    .hero .btn:hover::before {
+      left: 100%;
+    }
+
+    .hero .btn:hover {
+      background: #0ff;
+      color: #111;
+      box-shadow: 0 0 20px #0ff, 0 0 40px #ff00ff;
+    }
+
+    .content {
+      padding: 40px 20px;
+      background: #141414;
+      margin: 20px auto;
+      max-width: 1000px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px #0ff3;
+    }
+
+    .content h2 {
+      color: #ff00ff;
+      font-family: 'Orbitron', sans-serif;
+      margin-bottom: 15px;
+      text-shadow: 0 0 10px #ff00ff;
+    }
+
+    .content ul { list-style: none; }
+
+    .content ul li {
+      margin: 10px 0;
+      padding: 10px;
+      background: #1e1e1e;
+      border-left: 4px solid #0ff;
+      transition: 0.3s;
+    }
+
+    .content ul li:hover {
+      background: #222;
+      box-shadow: 0 0 10px #0ff;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    form input, form textarea {
+      margin: 10px 0;
+      padding: 10px;
+      background: #1e1e1e;
+      border: 1px solid #0ff;
+      color: #fff;
+      border-radius: 4px;
+    }
+
+    form button {
+      padding: 12px;
+      background: #0ff;
+      border: none;
+      font-family: 'Orbitron', sans-serif;
+      color: #111;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background: #ff00ff;
+      color: #fff;
+      box-shadow: 0 0 15px #ff00ff, 0 0 30px #0ff;
     }
 
     footer {
-      background: var(--accent);
-      color: var(--light);
       text-align: center;
       padding: 20px;
-      margin-top: 40px;
+      background: #111;
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #777;
     }
 
-    iframe {
-      width: 100%;
-      height: 300px;
-      border: none;
-    }
-
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
-      .hero {
-        font-size: 1.5rem;
-        height: 200px;
-      }
+    @media(max-width: 768px) {
+      .hero h2 { font-size: 2em; }
+      nav { flex-direction: column; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Noxious Coding Training</h1>
-    <p>Fueling young minds with code for kids in Umoja</p>
+    <h1>Noxious Coding School</h1>
+    <p>Cyberpunk Learning Hub - Umoja</p>
   </header>
 
   <nav>
     <a href="#about">About</a>
     <a href="#courses">Courses</a>
-    <a href="#commands">Commands</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <div class="hero">
-    Learn. Build. Lead.
-  </div>
+  <section class="hero">
+    <h2>Unlock the Future of Tech</h2>
+    <p>Master coding in a futuristic way with Noxious Coding School.</p>
+    <a href="#courses" class="btn">Enroll Now</a>
+  </section>
 
-  <section id="about" class="section">
+  <section class="content" id="about">
     <h2>About Us</h2>
-    <p>We are a coding school in Umoja, dedicated to teaching web and software development skills. Our mission is to inspire and equip the next generation of tech leaders.</p>
+    <p>Located in Umoja, Noxious Coding School offers hands-on training in web development, app design, and software engineering. With a cyberpunk-inspired environment, we merge creativity, code, and futuristic innovation.</p>
   </section>
 
-  <section id="courses" class="section">
+  <section class="content" id="courses">
     <h2>Our Courses</h2>
-    <div class="courses">
-      <div class="course">
-        <h3>Frontend Web Development</h3>
-        <p>Learn HTML, CSS, JavaScript, and React to build amazing websites.</p>
-      </div>
-      <div class="course">
-        <h3>Backend Development</h3>
-        <p>Master Python, Node.js, and databases to create powerful apps.</p>
-      </div>
-      <div class="course">
-        <h3>Mobile App Development</h3>
-        <p>Create Android and iOS apps using Flutter and React Native.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="commands" class="section">
-    <h2>Commands & Resources</h2>
-    <p>Here are some useful commands and resources to help you practice and learn more:</p>
-
-    <div class="commands">
-      <pre><code>
-# Create a simple HTML file
-echo "<h1>Hello World</h1>" > index.html
-
-# Run a Python program
-python hello.py
-
-# Initialize a Git repository
-git init
-      </code></pre>
-    </div>
-    <button class="copy-btn" onclick="copyCommands()">Copy Commands</button>
-
-    <p>📚 Learn More:</p>
     <ul>
-      <li><a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank">MDN Web Docs</a></li>
-      <li><a href="https://www.w3schools.com/" target="_blank">W3Schools (HTML, CSS, JS)</a></li>
-      <li><a href="https://docs.python.org/3/tutorial/" target="_blank">Python Official Tutorial</a></li>
-      <li><a href="https://git-scm.com/docs" target="_blank">Git Documentation</a></li>
+      <li>Web Development (HTML, CSS, JavaScript)</li>
+      <li>Mobile App Development (React Native)</li>
+      <li>Python Programming</li>
+      <li>Cybersecurity Basics</li>
+      <li>Beginner Coding for Kids</li>
     </ul>
   </section>
 
-  <section id="contact" class="section">
+  <section class="content" id="contact">
     <h2>Contact Us</h2>
-    <p><strong>Location:</strong> Umoja, Nairobi</p>
-    <p><strong>Email:</strong> <a href="mailto:mikeryan605@gmail.com" onclick="sayThanks()">mikeryan605@gmail.com</a></p>
-    <p><strong>Phone:</strong> <a href="tel:+254745738718" onclick="sayThanks()">+254 745738718</a></p>
-    <iframe src="https://www.google.com/maps?q=umoja,+nairobi,+kenya&output=embed"></iframe>
+    <p>📍 Location: Umoja, Nairobi, Kenya</p>
+    <p>📞 Phone: +254 700 123456</p>
+    <p>📧 Email: info@noxiouscodingschool.co.ke</p>
+
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <footer>
-    &copy; 2025 Noxious Coding Training. All rights reserved.
+    <p>&copy; 2025 Noxious Coding School - Umoja. All rights reserved.</p>
   </footer>
-
-  <script>
-    function copyCommands() {
-      const commands = `# Create a simple HTML file
-echo "<h1>Hello World</h1>" > index.html
-
-# Run a Python program
-python hello.py
-
-# Initialize a Git repository
-git init`;
-      navigator.clipboard.writeText(commands);
-      alert("Thank you! We appreciate your support ❤️");
-    }
-
-    function sayThanks() {
-      alert("Thank you! We appreciate your support ❤️");
-    }
-  </script>
 
 </body>
 </html>
