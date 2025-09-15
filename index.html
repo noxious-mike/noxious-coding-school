@@ -3,203 +3,182 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Noxious Coding Training</title>
-  <meta name="description" content="Noxious Coding Training in Umoja, Nairobi. Teaching kids and young minds coding skills in web, mobile, and backend development. Learn HTML, CSS, JavaScript, Python, React, Flutter, and more.">
+  <title>Noxious Coding School — Cyberpunk</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --primary: #075fe4;
-      --secondary: #0789da;
-      --neutral: #b6b6b7;
-      --dark: #333;
-      --light: #ffffff;
-      --accent: #697991;
-    }
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: var(--secondary);
-      color: var(--dark);
+      font-family: 'Share Tech Mono', monospace;
+      background: radial-gradient(circle at top, #0a0a0f, #000);
+      color: #0ff;
       line-height: 1.6;
-    }
-
-    h1, h2, h3 {
-      margin-top: 0;
-    }
-
-    a {
-      text-decoration: none;
+      overflow-x: hidden;
     }
 
     header {
-      background-color: var(--primary);
-      color: var(--light);
-      padding: 20px;
-      text-align: left;
+      text-align: center;
+      padding: 5rem 1rem 2rem;
+      background: rgba(0, 0, 0, 0.85);
+      border-bottom: 2px solid #0ff;
+      text-shadow: 0 0 5px #0ff, 0 0 15px #f0f;
+    }
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      animation: glitch 1.5s infinite;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
     }
 
     nav {
-      background: var(--dark);
       display: flex;
       justify-content: center;
-      gap: 30px;
-      padding: 10px;
+      gap: 2rem;
+      margin: 1rem 0;
     }
 
     nav a {
-      color: var(--light);
-      font-weight: 600;
-      transition: color 0.3s ease;
+      color: #0ff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
     }
 
     nav a:hover {
-      color: var(--secondary);
+      color: #f0f;
+      text-shadow: 0 0 10px #f0f;
     }
 
-    .hero {
-      background: url('https://images.unsplash.com/photo-1581091012184-5c1c6b6d8d32?auto=format&fit=crop&w=1200&q=80') 
-                  no-repeat center center/cover;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--light);
-      font-size: 2rem;
-      font-weight: bold;
-      text-shadow: 2px 2px 4px #000;
-      text-align: center;
-      padding: 0 15px;
-    }
-
-    .section {
-      padding: 40px 20px;
+    section {
+      padding: 4rem 2rem;
       max-width: 1000px;
       margin: auto;
     }
 
-    .courses {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+    section h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px #0ff, 0 0 20px #f0f;
+      border-bottom: 2px solid #0ff;
+      padding-bottom: 0.5rem;
     }
 
-    .course {
-      background: var(--light);
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    }
-
-    .commands {
-      background: #1e1e1e;
-      color: #f1f1f1;
-      padding: 15px;
-      border-radius: 8px;
-      margin: 20px 0;
-      overflow-x: auto;
-    }
-    .commands code {
-      font-family: monospace;
-      font-size: 14px;
+    /* Neon card for About */
+    .neon-card {
+      background: rgba(0, 0, 0, 0.7);
+      border: 2px solid #0ff;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 0 20px #0ff, 0 0 40px #f0f;
+      margin-top: 1rem;
     }
 
     footer {
-      background: var(--accent);
-      color: var(--light);
       text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background: rgba(0, 0, 0, 0.85);
+      border-top: 2px solid #0ff;
+      color: #888;
     }
 
-    iframe {
-      width: 100%;
-      height: 300px;
-      border: none;
+    /* Glitch effect */
+    @keyframes glitch {
+      0% { text-shadow: 2px 2px #f0f, -2px -2px #0ff; }
+      25% { text-shadow: -2px 2px #0ff, 2px -2px #f0f; }
+      50% { text-shadow: 2px -2px #0ff, -2px 2px #f0f; }
+      75% { text-shadow: -2px -2px #f0f, 2px 2px #0ff; }
+      100% { text-shadow: 2px 2px #f0f, -2px -2px #0ff; }
+    }
+
+    /* Splash screen */
+    #splash {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: #000;
+      color: #0ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      z-index: 9999;
+      animation: fadeOut 3s forwards;
+    }
+
+    @keyframes fadeOut {
+      0% { opacity: 1; }
+      80% { opacity: 1; }
+      100% { opacity: 0; visibility: hidden; }
     }
   </style>
 </head>
 <body>
 
+  <!-- Splash screen -->
+  <div id="splash">Welcome Noxious</div>
+
+  <!-- Header -->
   <header>
-    <h1>Noxious Coding Training</h1>
-    <p>Fueling young minds with code for kids in Umoja</p>
+    <h1>Noxious Coding School</h1>
+    <p>Learn. Build. Create in a Cyberpunk World</p>
   </header>
 
+  <!-- Navigation -->
   <nav>
     <a href="#about">About</a>
     <a href="#courses">Courses</a>
-    <a href="#commands">Commands</a>
+    <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <div class="hero">
-    Learn. Build. Lead.
-  </div>
-
-  <section id="about" class="section">
+  <!-- About -->
+  <section id="about">
     <h2>About Us</h2>
-    <p>We are a coding school in Umoja, dedicated to teaching web and software development skills. Our mission is to inspire and equip the next generation of tech leaders.</p>
+    <div class="neon-card">
+      <p>Welcome to Noxious Coding School, where innovation meets futuristic learning. 
+      We provide a space for aspiring developers to grow their skills and build real-world projects, 
+      all in a cyberpunk-inspired atmosphere.</p>
+    </div>
   </section>
 
-  <section id="courses" class="section">
+  <!-- Courses -->
+  <section id="courses">
     <h2>Our Courses</h2>
-    <div class="courses">
-      <div class="course">
-        <h3>Frontend Web Development</h3>
-        <p>Learn HTML, CSS, JavaScript, and React to build amazing websites.</p>
-      </div>
-      <div class="course">
-        <h3>Backend Development</h3>
-        <p>Master Python, Node.js, and databases to create powerful apps.</p>
-      </div>
-      <div class="course">
-        <h3>Mobile App Development</h3>
-        <p>Create Android and iOS apps using Flutter and React Native.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="commands" class="section">
-    <h2>Commands & Resources</h2>
-    <p>Here are some useful commands and resources to help you practice and learn more:</p>
-
-    <div class="commands">
-      <pre><code>
-# Create a simple HTML file
-echo "&lt;h1>Hello World&lt;/h1>" > index.html
-
-# Run a Python program
-python hello.py
-
-# Initialize a Git repository
-git init
-      </code></pre>
-    </div>
-
-    <p>📚 Learn More:</p>
     <ul>
-      <li><a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank">MDN Web Docs</a></li>
-      <li><a href="https://www.w3schools.com/" target="_blank">W3Schools (HTML, CSS, JS)</a></li>
-      <li><a href="https://docs.python.org/3/tutorial/" target="_blank">Python Official Tutorial</a></li>
-      <li><a href="https://git-scm.com/docs" target="_blank">Git Documentation</a></li>
+      <li>🌐 Web Development</li>
+      <li>📱 Mobile App Development</li>
+      <li>🤖 AI & Machine Learning</li>
+      <li>💻 Cybersecurity Basics</li>
     </ul>
   </section>
 
-  <section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <p><strong>Location:</strong> Umoja, Nairobi</p>
-    <p><strong>Email:</strong> mikeryan605@gmail.com</p>
-    <p><strong>Phone:</strong> +254 745738718</p>
-    <iframe src="https://www.google.com/maps?q=umoja,+nairobi,+kenya&output=embed"></iframe>
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Student Projects</h2>
+    <p>Check out some of the amazing futuristic projects created by our students.</p>
   </section>
 
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:contact@noxiousschool.com">contact@noxiousschool.com</a></p>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    &copy; 2025 Noxious Coding Training. All rights reserved.
+    <p>© 2025 Noxious Coding School. All rights reserved.</p>
   </footer>
 
 </body>
