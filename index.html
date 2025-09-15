@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noxious Coding Training</title>
+  <meta name="description" content="Noxious Coding Training in Umoja, Nairobi. Teaching kids and young minds coding skills in web, mobile, and backend development. Learn HTML, CSS, JavaScript, Python, React, Flutter, and more.">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #075fe4;
+      --secondary: #0789da;
+      --neutral: #b6b6b7;
+      --dark: #333;
+      --light: #ffffff;
+      --accent: #697991;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--secondary);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      margin-top: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: var(--light);
+      padding: 20px;
+      text-align: left;
+    }
+
+    nav {
+      background: var(--dark);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px;
+    }
+
+    nav a {
+      color: var(--light);
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--secondary);
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1581091012184-5c1c6b6d8d32?auto=format&fit=crop&w=1200&q=80') 
+                  no-repeat center center/cover;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--light);
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px #000;
+      text-align: center;
+      padding: 0 15px;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .courses {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .course {
+      background: var(--light);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    footer {
+      background: var(--accent);
+      color: var(--light);
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+    }
+
+    form {
+      background: var(--light);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      margin-top: 20px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    form button {
+      background: var(--primary);
+      color: var(--light);
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    form button:hover {
+      background: var(--secondary);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Noxious Coding Training</h1>
+    <p>Fueling young minds with code for kids in Umoja</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#courses">Courses</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="hero">
+    Learn. Build. Lead.
+  </div>
+
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>We are a coding school in Umoja, dedicated to teaching web and software development skills. Our mission is to inspire and equip the next generation of tech leaders.</p>
+  </section>
+
+  <section id="courses" class="section">
+    <h2>Our Courses</h2>
+    <div class="courses">
+      <div class="course">
+        <h3>Frontend Web Development</h3>
+        <p>Learn HTML, CSS, JavaScript, and React to build amazing websites.</p>
+      </div>
+      <div class="course">
+        <h3>Backend Development</h3>
+        <p>Master Python, Node.js, and databases to create powerful apps.</p>
+      </div>
+      <div class="course">
+        <h3>Mobile App Development</h3>
+        <p>Create Android and iOS apps using Flutter and React Native.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p><strong>Location:</strong> Umoja, Nairobi</p>
+    <p><strong>Email:</strong> mikeryan605@gmail.com</p>
+    <p><strong>Phone:</strong> +254 745738718</p>
+
+    <!-- Contact Form -->
+    <form action="mailto:mikeryan605@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <iframe src="https://www.google.com/maps?q=umoja,+nairobi,+kenya&output=embed"></iframe>
+  </section>
+
+  <footer>
+    &copy; 2025 Noxious Coding Training. All rights reserved.
+  </footer>
+
+</body>
+</html>
